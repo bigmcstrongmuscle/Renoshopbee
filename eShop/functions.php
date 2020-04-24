@@ -61,6 +61,11 @@ add_image_size( 'eshop_related_gallery', 270, 300, true );
 require get_template_directory() . '/includes/helpers.php';
 
 /**
+ * TGM plugin activation.
+ */
+require get_template_directory() . '/includes/eshop_required_plugins.php';
+
+/**
  * Wishlist buttons in single product page
  */
 require get_template_directory() . '/includes/eshop_put_wishlist_buttons.php';
