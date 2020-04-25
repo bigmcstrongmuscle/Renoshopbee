@@ -12,10 +12,12 @@ function eShop_search_answer () {
 		wp_die('Левые полключения');
 	};
 
+	$prepared_query_string = esc_sql(esc_html(trim($_POST['s'])));
+
 	$arg = array(
 		'post_type' => array('post', 'product'),
 		'post_status' => 'publish',
-		's' => esc_sql($_POST['s'])
+		's' => $prepared_query_string
 	);
 	
 	$query = new WP_Query($arg);

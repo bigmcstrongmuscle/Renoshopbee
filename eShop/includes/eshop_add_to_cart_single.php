@@ -57,8 +57,8 @@ function get_chosen_variation($prodid, $matching_attributes) {
 	$result = array();
 	$fixed_matching_array = array();
 	
-	foreach($matching_attributes as $attr_name => $attr_value) {
-		$fixed_matching_array['attribute_'.esc_sql($attr_name)] = esc_sql($attr_value);
+	foreach($matching_attributes as $matching_attr_name => $matching_attr_value) {
+		$fixed_matching_array['attribute_'.esc_sql($matching_attr_name)] = esc_sql($matching_attr_value);
 	};
 	
 	foreach($variations as $key => $vararray) {
