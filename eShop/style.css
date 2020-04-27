@@ -1212,7 +1212,7 @@ li.product a.woocommerce-loop-product__link span.price > span.amount {
 	width: 100%;
 	table-layout: initial;
 	border-collapse: collapse;
-	color: #var(--commonColor);
+	color: var(--commonColor);
 }
 
 .shopcart table th,
@@ -1221,7 +1221,8 @@ li.product a.woocommerce-loop-product__link span.price > span.amount {
 	border: 2px solid #e5e5e5;
 }
 
-.shopcart table thead {
+.shopcart table thead,
+.shopcart table td {
 	text-align: center;
 }
 
@@ -2522,6 +2523,11 @@ aside.leftSidebar .widget_products .product_list_widget li a img{
 	max-width: 475px;
 }
 
+.productFull__thumbnails div.slick-track img.slick-slide {
+	height: 90px;
+	width: auto;
+}
+
 .productFull__carousel .slick-slide {
 	margin: 0;
 	padding: 0 12.5px;
@@ -2860,6 +2866,10 @@ section.related.products {
 	padding: 0;
 }
 
+section.related.products ul li img{
+	width: 100%;
+}
+
 .productRelated {
 	margin: 0;
 	padding: 2rem 0 3rem 0;
@@ -3055,6 +3065,12 @@ section.related.products {
 /*****************************************/
 /*************** my account **************/
 /*****************************************/
+
+.woocommerce-MyAccount-content {
+	margin: 2rem 0 4rem 0;
+	padding: 0;
+}
+
 .form-group span.password-input {
 	display: block;
 	width: 100%;
@@ -3252,6 +3268,17 @@ section.related.products {
 		margin: 0 auto;
 		text-align: center;
 	}
+	
+	.shopcart table tр,
+	.shopcart table td{
+		padding: 1rem .2rem;
+		width: auto;
+	}
+	
+	.shopcart table img {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 @media (max-width: 1117px) {
@@ -3292,6 +3319,20 @@ section.related.products {
 		justify-content: flex-start;
 		align-items: center;
 	}
+	
+	.shopcart table * {
+		font-size: 10px;
+	}
+	
+	.shopcart table td{
+		padding: .5rem 0;
+		width: auto;
+	}
+	
+	.shopcart table td.product-quantity input{
+		width: 50px;
+	}
+	
 }
 
 @media (max-width: 1000px) {
@@ -3420,11 +3461,20 @@ section.related.products {
 		padding: 2.5rem .5rem;
 		
 	}
+	
+	.mainMenu__mainNav ul li a,
+	.woocommerce-MyAccount-navigation	{
+		font-size: 12px;
+	}
 }
 
 @media (max-width: 860px) {
 	.social__text {
 		display: none;
+	}
+	
+	.mainMenu__mainNav ul li a {
+		font-size: 10px;
 	}
 }
 
