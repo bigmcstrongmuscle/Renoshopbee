@@ -44,15 +44,16 @@ add_action( 'wp_enqueue_scripts', 'eshop_enqueue_scripts' );
  * Enqueue styles.
  */
 function eshop_enqueue_styles() {
-	wp_enqueue_style( 'eshop_bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1', 'all');
+	//wp_enqueue_style( 'eshop_bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1', 'all');
 	wp_enqueue_style( 'eshop_fonts_roboto', 'https://fonts.googleapis.com/css?family=Roboto&display=swap', array(), '1', 'all');
 	wp_enqueue_style( 'eshop_fonts_poppins', 'https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext', array(), '1', 'all');
-	wp_enqueue_style( 'eshop-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.min.css', array(), '1', 'all');
-	wp_enqueue_style( 'eshop-fontawesome-all', get_template_directory_uri() . '/assets/css/all.min.css', array(), '1', 'all');
+	//wp_enqueue_style( 'eshop-fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.min.css', array(), '1', 'all');
+	//wp_enqueue_style( 'eshop-fontawesome-all', get_template_directory_uri() . '/assets/css/all.min.css', array(), '1', 'all');
 	//wp_enqueue_style( 'eshop-multirange', get_template_directory_uri() . '/assets/css/multirange.css');
 	//wp_enqueue_style( 'eshop-nouislider', get_template_directory_uri() . '/assets/css/nouislider.min.css', array(), '1', 'all');
-	wp_enqueue_style( 'eshop-slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1', 'all');
-	wp_enqueue_style( 'eshop-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '1', 'all');
-	wp_enqueue_style( 'eshop-style', get_stylesheet_uri(), array('eshop_bootstrap', 'eshop_fonts_poppins', 'eshop_fonts_roboto', 'eshop-fontawesome', 'eshop-fontawesome-all', 'eshop-slick', 'eshop-slick-theme'), '1', 'all');//, 'eshop-nouislider'
+	//wp_enqueue_style( 'eshop-slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1', 'all');
+	//wp_enqueue_style( 'eshop-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '1', 'all');
+	wp_enqueue_style( 'concatted-styles', get_template_directory_uri() . '/assets/css/concatted-styles.css', array(), '1', 'all');
+	wp_enqueue_style( 'eshop-style', get_stylesheet_uri(), array('eshop_fonts_poppins', 'eshop_fonts_roboto', 'concatted-styles'), '1', 'all');//, 'eshop-nouislider'
 };
 add_action( 'wp_enqueue_scripts', 'eshop_enqueue_styles' );
